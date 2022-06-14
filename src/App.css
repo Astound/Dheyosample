@@ -1,38 +1,78 @@
-.App {
-  text-align: center;
+@font-face {
+  font-family: 0fa;
+  src: url(Components/GeneralSans-Regular.ttf);
+  font-family: dheyo;
+}
+.layout{
+  display:grid;
+  height: 100vh;
+  grid-template-columns: 0.2fr 1fr;
+  grid-template-rows: auto 1fr;
+  grid-template-areas:
+    "nav nav"
+    "side mid"
+  ;
+  gap: 0.5rem;
+  font-family: dheyo;
+}
+.order{
+  display: grid;
+  grid-template-columns: 1fr 0.75fr;
+}
+.nav{
+  grid-area: nav;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+li span {
+  position: relative;
+  left: -8px;
+}
+.sidebar{
+  grid-area: side;
+}
+.mid{
+  grid-area: mid;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.midd{
+  display:grid;
+  grid-template-columns: 1fr 0.5fr;
+}
+.cartt{
+  display:grid;
+  grid-template-columns: 1fr 0.35fr;
+}
+.paydetails{
+  display:grid;
+  grid-template-columns: 0.7fr 0.1fr 0.2fr;
+}
+.payprocess{
+  display:grid;
+  grid-template-columns: 0.5fr 0.3fr;
+}
+.payprice{
+  display:grid;
+  grid-template-columns: 0.5fr 0.5fr;
+}
+.balance{
+  font-family: sans-serif;
+  color: #5C9DFE;
+  font-style: normal;
+  font-weight: 600;
+  align-self: center;
+}
+.balancecard{
+  word-spacing: 1em;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.form-control{
+  background-color:#2C2C2C ;
+
+}
+.delete{
+  display: none;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.dropdown:hover .dropdown-menu {
+  display: block;
 }
